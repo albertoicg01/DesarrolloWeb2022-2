@@ -1,0 +1,712 @@
+/*Para una mejor adaptabilidad en otros dispositivos se agregan 2 selectores:
+1rem=10px*/
+/*Paleta de colores agregadas por variables css*/
+
+/*Globales
+=======================================================================================*/
+:root{
+    --blanco: #0E050F;
+    --oscuro: #ffd900;
+    --primario: #212121;
+    --secundario:#633877;
+    --gris:#757575;
+    --grisClaro:#DFE9F3;
+}
+html {
+    font-size: 62.5%;
+    /*Parte añadida para box model */
+    box-sizing: border-box;
+    /**/
+    scroll-snap-type: y mandatory;
+}
+
+.servicios,
+.navegacion-principal,
+.formulario{
+    scroll-snap-align:center;
+    scroll-snap-stop: always;
+}
+
+
+/*Este selector es un selector universal*/
+*,*:before, *:after{
+    box-sizing: inherit;
+}
+
+.sombra{
+    /*Sombra*/
+    -webkit-box-shadow: 0px 5px 15px 0px rgba(122,122,122,0.75);
+    -moz-box-shadow: 0px 5px 15px 0px rgba(122,122,122,0.75);
+    box-shadow: 0px 5px 15px 0px rgba(122,122,122,0.75);
+    /*Color de sombra*/
+    background-color: var(--blanco);
+
+    /*Esquinas*/
+    border-radius: 15px 15px 15px 15px;
+    -moz-border-radius: 15px 15px 15px 15px;
+    -webkit-border-radius: 15px 15px 15px 15px;
+
+
+    /*Separación de márgen*/
+    padding:2rem;
+}
+/*Fin Globales
+=======================================================================================*/
+
+
+
+/*Servicios
+======================================================================*/
+.sombra_servicios{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.sombra_servicios h3{
+    color: var(--grisClaro);
+}
+
+
+.sombra_servicios p{
+    line-height: 3rem;
+    text-align: center;
+}
+
+.sombra_servicios .iconos{
+    height: 15rem;
+    width: 15rem;
+    background-color: var(--secundario);
+    border-radius: 50%;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: space-evenly;
+    
+}
+
+
+
+
+/*Formulario
+======================================================================*/
+.formulario{
+    background-color: var(--gris);
+    border-radius: 1rem;
+    width:min(60rem,100%);/*Ésta función siempre devuelve el valor mínimo entre el 600px y el 100%, ayuda a hacer el width responsivo, sin necesidad de usar mediaqueries*/
+    padding:2rem;
+    margin: 0 auto;   
+}
+
+
+.formulario fieldset{
+    border:none;
+}
+
+
+.formulario legend{
+    color:var(--primario);
+    text-transform: uppercase;
+    font-size: large;
+    margin: 0 auto;
+    margin-bottom: 2rem;
+}
+
+
+
+
+
+
+.campos_entradas label{
+    color:var(--blanco);
+    display: block;
+    margin-top: 1rem;
+    font-weight: bold; /*(Que es lo mismo que 700)*/
+    
+    
+}
+
+.campos_entradas textarea{
+    height: 16rem;
+}
+
+.input-text{
+    width:100%;
+    padding:1.5rem;
+    border: none;
+    border-radius: 0.5rem;    
+}
+/*Fin Formulario
+======================================================================*/
+
+
+
+
+
+
+
+
+/*----Aspectos básicos de la tipografía----*/
+body {
+    font-size: 16px;
+    font-family: 'Krub', sans-serif;
+    /*Añadir degradado de color*/
+    background-image:linear-gradient(to top,var(--grisClaro) 0%, var(--blanco) 100%);
+}
+
+h1 {
+    font-size: 3.8rem;    
+}
+
+h2 {
+    font-size:2.8rem
+}
+
+h3 {
+    font-size: 1.8rem;
+}
+
+h1,h2,h3{
+    text-align:center;
+}
+/*Parte 2 
+=======================================================================================*/
+/*----Aspectos básicos de la tipografía----*/
+.titulo {
+    text-align:center;
+    color:var(--grisClaro);
+ 
+    font-weight: bold;
+}
+
+
+
+.titulo span {
+    font-size: 1rem;/**/    
+}
+
+.contenedor{
+    max-width:120rem;
+    margin:0 auto;/*Para centrar contenido de la página*/
+    margin-top: 2rem;
+    
+}
+
+.boton{
+    background-color: var(--secundario);
+    color:var(--blanco);
+    padding:1rem 2rem;
+    margin-top: 3rem;
+    font-size:2rem;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: bold;
+    border-radius: .5rem;
+    width:90%;
+    text-align: center;
+    border: none;
+}
+.boton:hover{
+    cursor:pointer;
+}
+
+/*Utilidades
+======================================================================*/
+.w-sm-100{
+    width: 100%;
+}   
+/*Fin utilidades
+======================================================================*/
+
+
+
+
+.navegacion-principal{
+    background-color: var(--secundario);
+    display: flex;
+    flex-direction: column;/*Valor por defecto*/
+    align-items: center;/*este valor funciona sólo para alineación vertical*/
+    
+}
+
+.nav-bg{
+    background-color: var(--secundario);
+}
+.navegacion-principal a{
+    display:block;
+    text-align: center;   
+    color:var(--grisClaro);
+    text-decoration: none;
+    font-size: 2rem;
+    font-weight:700;/*Es lo mismo que poner bold*/
+    padding: 1rem;
+
+}
+
+.navegacion-principal a:hover{
+    background-color: var(--primario);
+    color:var(--oscuro);
+    
+}
+
+.contenido-hero a:hover{
+    background-color: var(--primario);
+    color:var(--oscuro);
+}
+
+@media (min-width: 368px) {
+    /*body{
+        background-color: pink;
+    }*/
+
+    .titulo{
+        font-size: 1.8rem;
+    }
+
+    .titulo span{
+        font-size: 1rem;
+    }
+ }
+
+@media (min-width: 480px) {
+  /*  body{
+        background-color: blue;
+    }*/
+
+    .titulo{
+        font-size: 2.8rem;
+    }
+
+    .titulo span{
+        font-size: 2rem;
+    }
+
+   
+ }
+@media (min-width: 768px) {
+    
+    /*body{
+        background-color: red;
+  
+    }*/
+    .boton{
+        width:auto;
+    }
+    
+    /*Utilidades
+    ======================================================================*/
+    .w-sm-100{
+        width: auto;
+    }
+    
+    .flex{
+        display: flex;
+    }
+
+    .alinear-derecha{
+        justify-content: end;
+    }
+    /*Fin utilidades
+    ======================================================================*/
+
+    
+    
+    .navegacion-principal{
+        flex-direction: row;
+        justify-content: space-between;
+    }
+ 
+    .titulo{
+        font-size: 3.8rem;
+    }
+
+    .titulo span{
+        font-size: 2rem;
+    }
+
+    .autor h1{
+        font-size: 3.8rem;
+    }
+
+    
+.servicios{ 
+    display: grid;
+    grid-template-columns: repeat(3,33.3%);
+    column-gap: 1rem;
+    
+    /*
+    Sintaxis equivalente para la instrucción anterior
+    grid-template-columns: 33.3% 33.3% 33.3%;
+    grid-template-columns: repeat(3,1fr);
+    grid-template-columns: 1fr, 1fr;
+    */
+    
+}
+
+.contenedor_campos{
+    display: grid;
+    grid-template-columns: 50% 50%; /*repeat(2,1fr);  Es lo mismo*/
+    grid-template-rows: auto auto 20rem;
+    column-gap: 1rem;/*Separación de columnas*/
+}
+
+
+.campos_entradas:nth-child(3),
+.campos_entradas:nth-child(4){
+    grid-column: 1/3;
+}
+
+    
+
+    
+
+}
+
+
+
+
+
+
+
+/*Parte 3: imágenes
+=======================================================================================*/
+.hero {
+    background-image: url(../img/hero2.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 450px;
+    padding: 5rem;
+    position: relative;
+
+}
+.contenido-hero{
+    position:absolute;
+    background-color:rgba(0,0,0,0.4);/*Anterior*/
+    top:0;
+    bottom:0;
+    right:0;
+    left:0;
+    /*Código para alinear cualquier elemento, de forma universal*/
+    display:flex;
+    flex-direction:column;
+    align-items:center;/*Orientación vertial*/
+    justify-content: center; /*Orientación horizontal*/
+
+}
+/*Para no repetir código*/
+.contenido-hero h2,
+.contenido-hero p {
+    color:var(--grisClaro);
+}
+.parrafo_desc{
+    color: var(--grisClaro);
+}
+
+
+/*Footer
+=======================================================================================*/
+.footer p{
+    display: flex;
+    flex-direction: row;
+    justify-content: center; /*Orientación horizontal*/
+    text-align: center;
+    
+}
+
+/*
+Formas de escribir selectores
+
+============================================================================
+Selector de elemento
+
+Selecciona uno o múltiples elementos, dependiendo de cómo se conforme el selector
+Seleccionará un elemento de acuerdo a su etiqueta.
+
+
+p{
+    color:blue;
+}
+============================================================================
+Selector de clase
+
+Son reutilizables e inician con un "punto"
+.cliente{
+    color:blue;
+}
+
+============================================================================
+Selector de ID
+
+Se pueden tener ID's ppor pagina pero no pueden repetirse
+
+# cliente{
+    color:blue;
+}
+
+
+============================================================================
+Selectro de atributo
+
+Selecciona elementos basados en algún elemento que tenga.
+
+[src="logo.jpg"]{
+    color:blue;
+}
+
+============================================================================
+Combinaciones de Descendentes
+
+Selecciona los elementos hijos cuyo padre sea una clase o ID en específico
+.cliente .nombre{
+    color:blue;
+}
+
+============================================================================
+Todos los hijos
+
+Aplica la siguiente regla a todos los  párrafos hijos
+
+.cliente >p{
+    color:blue;
+}
+
+
+
+NOTAS:
+    SE RECOMIENDA SIEMPRE ESCRIBIR CÓDIGO CSS CON CLASES
+    
+    NO ES MUY RECOMENDABLE ESCRIBIR ID'S PORQUE AFECTAN ALGO LLAMADO ESPECIFICIDAD
+    SE PUEDEN TENER MÚLTIPLES ID'S POR DOCUMENTO PERO NO CON EL MISMO NOMBRE!!!
+
+    NO EMPEZAR UN SELECTOR CON UN NÚMERO
+
+
+    ==============================================================================
+    ESPECIFICIDAD EN CSS                           
+    ==============================================================================
+    Esto refiere a, ¿qué valores serán tomados en cuenta por el navegador?
+
+    CÓMO EL NAVEGADOR TOMA EN CUENTA EL CSS EN FUNCIÓN DE QUÉ TAN ESPECÍFICO SEA EL SELECTOR QUE HAYAMOS 
+    CREADO.
+
+    ////////////////////////////////////////////////////////////////////////////////
+    Ejemplo 1: Misma especificidad.
+
+    p {
+        color:blue;    
+    }
+
+    p{
+        color:red;
+    }
+
+    Como tienenen la misma especificidad, se aplica el color rojo porque está al final
+    del documento
+    ////////////////////////////////////////////////////////////////////////////////
+    Ejemplo 2: Misma especificidad.
+
+    p.parrafo {
+        color:blue;    
+    }
+
+    p{
+        color:red;
+    }
+
+    Como tiene más especificidad el primer selector, se aplicará el color azul y NO el 
+    color rojo.
+    ////////////////////////////////////////////////////////////////////////////////
+        Ejemplo 2: Misma especificidad.
+
+    p#parrafo {
+        color:blue;    
+    }
+
+    p{
+        color:red!important;
+    }
+
+    Como el segundo selector tiene la bandera !important, le pasa por encima a todos.
+
+
+    --------------------------------------------------------------------------------
+    Nota final: si un elemento tiene un selector más específico, no importa mucho
+    donde haya sido declarado, CSS decidirá por su especificidad.
+    --------------------------------------------------------------------------------
+    ////////////////////////////////////////////////////////////////////////////////
+
+
+    
+    SIEMPRE Y CUANDO SE TRATE DE UN MISMO SELECTOR, COMENZARÁ A APLICAR LOS ESTILOS DE ABAJO HACIA ARRIBA
+    Y NO DE ARRIBA HACIA ABAJO
+
+    ENTRE MÁS ESPECÍFICO SEA UN SELECTOR, ES MÁS PROBABLE QUE SE APLIQUE, NO IMPORTANDO EN QUÉ PARTE DEL
+    DOCUMENTO SE APLIQUE
+
+
+    *********************************************************************************
+     =========     =======                ========     ======     ======    =======
+    ||           ||       ||  ||        ||       ||  ||      ||  ||        || 
+    ||           ||       ||  ||        ||       ||  ||______||  ||====    ||======
+    ||           ||       ||  ||        ||       ||  || ||__     ||               ||
+    ||________   ||_______||  ||______  ||_______||  ||    ||    ||======   ______||
+
+     ========   ========    ========
+    ||         ||          || 
+    ||         ||______    ||_______
+    ||                 ||          ||
+    ||________  _______||   _______||  
+
+    *********************************************************************************
+
+    Se les puede decir a sus colores 
+    Funciona en cualquier navegador moderno.
+
+    -por nombre
+        color:blue;
+        color:black;
+        color:cornflowerblue
+    -código hexadecimal (Tiene soporte a transparencia)
+        HEX #000;
+        #000000;
+    -sistema rgb()
+    -sistema hsl()
+
+    *********************************************************************************
+    D I S P L A Y
+    *********************************************************************************
+    Hay 2 tipos: block e inline
+
+    display:block;
+        El elemento se colocará uno debajo del otro sin importar
+        su tamaño o contenido
+    
+    display:inline;
+        Significa que el elemento se posicionará a la derecha una
+        vez que haya tomado el espacio que requiere
+    
+    Ningún elemento tiene
+        display:flex; -->Activa otras características
+        display:grid;
+    Por default
+
+    No es necesario especificar un display por cada elemento, YA QUE POR DEFAULT PONE BLOCK.
+     _ _ _ _ _ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ _  
+    |>FLEXBOX
+    |Fue diseñado como un modelo unidimensional para crear layouts.
+    |Fue especialmente diseñado para alinear los elementos en tus diseños.
+    |No añade efectos de animación, ni textos, es una tecnología utilizada únicamente para los 
+    |layouts y sustituye a los floats o table-cell.
+    |_ _ _ _ _ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ __ _ _ _  
+
+    Tiene dos ejes para distribuir elementos en una sola dirección: 
+        -fila (izq a derecha)
+        -columna (arriba hacia abajo)
+    
+    
+    *********************************************************************************
+    F O R M A S   D E   E S C R I B I R   C S S
+    *********************************************************************************
+    Existen diferentes formas de escribir código CSS: BEM, Utility First o Módulo.
+    Si el proyecto tiende a ser grande, es conveniente usar cualquiera de los 3.
+    
+
+    BEM - Bloques, elementos y modificadores
+
+        .card{}
+
+        .card__titulo{}
+
+        .card__imagen{}
+        
+        .card__boton{}
+
+        .card__boton--activo{}
+
+    Utility First - Se crean clases con una sola propiedad, que describen qué es lo que se haría
+
+        Básicamente, lo que se tiene es una propiedad y un valor por clase. 
+        .text-center{}
+
+        .color-red-100{}
+
+        .bg-blue-200{}
+
+        -.p-2{}
+
+        -.m-2{}
+    
+        Módulos
+            Se define el contenido principal y después va seleccionando cada uno de los
+            elementos en html.
+
+            Se define una clase padre y después se va seleccionando todas las etiquetas del código html.
+
+    *********************************************************************************
+    R E S P O N S I V E    W E B    D E S I G N
+    *********************************************************************************
+    
+    La solución para evitar crear múltiples sitios web y que sean adaptables a una gran cantidad 
+    de dispositivos es: Responsive Web Design con Media Queries.
+
+    ¿Qué es?
+
+    Este enfoque nos dice que nuestros diseños se deberán adaptar a las interacciones del usuario 
+    y a la resolución utilizada.
+
+    Los sitios web deberán adaptarse a celulares, tabletas, laptops, computadoras de escritorio,
+    televisores.
+
+    ¿Cómo se logra esto?
+
+    Con Media Queries
+
+
+
+    A continuación, tamaños recomendados:
+
+    --768px se activa con pantalla de computadora o televisión
+    @media (min-width:768px){
+            
+    }
+
+    --468px, se activa con teléfono
+    @media (min-width:468px){
+
+    }
+
+    --Computadoras de escritorio o laptops o televisión
+    @media (min-width:1444px){
+
+    }   
+
+    @media (min-width:1440px){
+
+    }
+
+    NOTA IMPORTANTE!!!!
+    Para probar diferentes tamaños, se recomienda descargar: ResponsivelyApp, 
+    permite simiular distintos tamaños y es de uso gratuito.
+
+    
+    *********************************************************************************
+    C S S   B O X   M O D E L
+    *********************************************************************************
+    El tamaño de lo que se muestra en pantalla, está delimitado por 4 cosas:
+        -tamaño de contenido
+        -tamaño de relleno (padding)
+        -tamaño del borde
+        -tamaño del margen
+    
+    Todo en CSS es una caja, pero la forma o características de la caja, dependerá de 
+    4 cosas:
+
+
+    *********************************************************************************
+    C S S    G R I D
+    *********************************************************************************
+    CSS Grid te permite definir la ubicación y tamaño de los elementos de tu sitio
+    WEB.
+
+
+    */
