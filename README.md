@@ -1,4 +1,3 @@
-### Repositorio de Cruz Galván Alberto Israel
 ### Negocios electrónicos y desarrollo web
 ### Grupo 1
 ### Profesor: M.I Angel Cesar Govantes Saldivar
