@@ -14,5 +14,6 @@ contiene un archivo llamado **css.docx**, en el que hay notas de interés acerca
 - La carpeta **/img** sólo contiene una imagen de presentación para este repositorio.
 
 <p align="center">
+  <a align="center" url="https://youtu.be/wplZZoa8Tfk">Vídeo de Youtube con explicación de proyecto</a>
   <img src="https://raw.githubusercontent.com/albertoicg01/DesarrolloWeb2022-2/main/img/img_readme.png"/>
 </p>
