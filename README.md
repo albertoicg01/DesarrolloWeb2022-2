@@ -13,7 +13,24 @@ Siéntete libre de revisar el proyecto y analizar el código;
 contiene un archivo llamado **css.docx**, en el que hay notas de interés acerca de CSS;
 - La carpeta **/img** sólo contiene una imagen de presentación para este repositorio.
 
-<p align="center">
-  <a align="center" url="https://youtu.be/wplZZoa8Tfk">Vídeo de Youtube con explicación de proyecto</a>
-  <img src="https://raw.githubusercontent.com/albertoicg01/DesarrolloWeb2022-2/main/img/img_readme.png"/>
-</p>
+
+<style>
+  .logo{
+    width:25%;
+  }
+  .frame{
+    border: 2px solid red;
+    border-radius:5px
+    
+  }
+</style>
+
+
+<div class="frame" align="center">
+  <br>
+  <a href="https://youtu.be/wplZZoa8Tfk">Vídeo de Youtube con explicación de proyecto y exposición</a>
+  <br>
+  <img class="logo" src="https://raw.githubusercontent.com/albertoicg01/DesarrolloWeb2022-2/main/img/img_readme_2.png">
+  <br>
+</div>
+</html>
