@@ -14,16 +14,7 @@ contiene un archivo llamado **css.docx**, en el que hay notas de interés acerca
 - La carpeta **/img** sólo contiene una imagen de presentación para este repositorio.
 
 
-<style>
-  .logo{
-    width:25%;
-  }
-  .frame{
-    border: 2px solid red;
-    border-radius:5px
-    
-  }
-</style>
+
 
 
 <div class="frame" align="center">
